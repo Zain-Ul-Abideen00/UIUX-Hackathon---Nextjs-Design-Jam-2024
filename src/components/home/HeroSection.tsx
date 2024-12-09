@@ -23,7 +23,7 @@ export const HeroSection = () => {
           {/* Hero Image */}
           <div className="w-full h-[300px] sm:h-[500px] lg:h-[700px] relative">
             <Image
-              src="/hero.png"
+              src="/Hero.png"
               alt="Nike Air Max Pulse"
               fill
               priority
