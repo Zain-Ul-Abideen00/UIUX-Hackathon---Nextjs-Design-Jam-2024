@@ -1,5 +1,4 @@
 "use client"
-import { AiOutlineConsoleSql } from 'react-icons/ai'
 import Link from 'next/link'
 import Image from 'next/image'
 

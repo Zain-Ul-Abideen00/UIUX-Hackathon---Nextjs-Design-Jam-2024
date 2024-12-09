@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Button } from '../ui/Button';
 
 
 export const HeroSection = () => {
@@ -21,8 +22,8 @@ export const HeroSection = () => {
         <div className="relative">
           {/* Hero Image */}
           <div className="w-full h-[300px] sm:h-[500px] lg:h-[700px] relative">
-            <Image 
-              src="/hero.png" 
+            <Image
+              src="/hero.png"
               alt="Nike Air Max Pulse"
               fill
               priority
@@ -37,21 +38,23 @@ export const HeroSection = () => {
               Nike Air Max Pulse
             </h1>
             <p className="max-w-[511px] mx-auto mt-4 sm:mt-7 text-sm sm:text-base px-4">
-              Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse —designed to push you past your limits and help you go to the max.
+              Extreme comfort. Hyper durable. Max volume. Introducing the Air
+              Max Pulse —designed to push you past your limits and help you go
+              to the max.
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-1.5 mt-6 sm:mt-8 lg:mt-12">
-              <button className="w-full sm:w-auto px-6 py-2 bg-[#111] text-white rounded-full">
+              <Button>
                 Notify Me
-              </button>
-              <button className="w-full sm:w-auto px-6 py-2 bg-[#111] text-white rounded-full">
+              </Button>
+              <Button>
                 Shop Air Max
-              </button>
+              </Button>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

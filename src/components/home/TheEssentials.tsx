@@ -1,6 +1,7 @@
 "use client"
 
 import Image from 'next/image'
+import { Button } from '../ui/Button'
 
 interface EssentialCard {
   image: string
@@ -24,15 +25,18 @@ const essentials: EssentialCard[] = [
 
 export const TheEssentials = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-12 mb-16">
+    <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 mb-8 sm:mb-16">
       <h2 className="text-[24px] text-[#111111] font-medium mb-[25px]">
         The Essentials
       </h2>
 
       {/* Cards Container */}
-      <div className="flex gap-[12px]">
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-[12px]">
         {essentials.map((item, index) => (
-          <div key={index} className="relative w-[440px] h-[540px] group">
+          <div
+            key={index}
+            className="relative w-full sm:w-[440px] h-[300px] sm:h-[540px] group"
+          >
             {/* Image */}
             <Image
               src={item.image}
@@ -42,17 +46,15 @@ export const TheEssentials = () => {
             />
 
             {/* Category Button */}
-            <button 
-              className="absolute bottom-[48px] left-[48px] px-[21.5px] py-[7.5px] 
-                       bg-white text-[#111111] rounded-full 
-                       transition-transform duration-300
-                       hover:scale-105"
+            <Button
+              variant="secondary"
+              className="absolute bottom-[48px] left-[48px] hover:scale-105"
             >
               {item.category}
-            </button>
+            </Button>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 } 
