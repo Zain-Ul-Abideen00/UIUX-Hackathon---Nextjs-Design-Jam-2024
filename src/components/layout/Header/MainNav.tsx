@@ -25,22 +25,22 @@ export const MainNav = ({ isMenuOpen, setIsMenuOpen }: MainNavProps) => {
 
         {/* Main Navigation Links - Hidden on Mobile */}
         <div className="hidden lg:flex items-center gap-[24px]">
-          <Link href="/new" className="text-[16px] text-[#111111] hover:text-black font-medium">
+          <Link href="/products" className="text-[16px] text-[#111111] hover:text-black font-medium">
             New & Featured
           </Link>
-          <Link href="/men" className="text-[16px] text-[#111111] hover:text-black font-medium">
+          <Link href="/products" className="text-[16px] text-[#111111] hover:text-black font-medium">
             Men
           </Link>
-          <Link href="/women" className="text-[16px] text-[#111111] hover:text-black font-medium">
+          <Link href="/products" className="text-[16px] text-[#111111] hover:text-black font-medium">
             Women
           </Link>
-          <Link href="/kids" className="text-[16px] text-[#111111] hover:text-black font-medium">
+          <Link href="/products" className="text-[16px] text-[#111111] hover:text-black font-medium">
             Kids
           </Link>
-          <Link href="/sale" className="text-[16px] text-[#111111] hover:text-black font-medium">
+          <Link href="/products" className="text-[16px] text-[#111111] hover:text-black font-medium">
             Sale
           </Link>
-          <Link href="/snkrs" className="text-[16px] text-[#111111] hover:text-black font-medium">
+          <Link href="/products" className="text-[16px] text-[#111111] hover:text-black font-medium">
             SNKRS
           </Link>
         </div>
