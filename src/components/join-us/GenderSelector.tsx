@@ -11,7 +11,7 @@ export default function GenderSelector() {
       <Button
         type="button"
         variant={selected === "male" ? "default" : "outline"}
-        className="flex-1"
+        className="flex-1 rounded-md"
         onClick={() => setSelected("male")}
       >
         Male
@@ -19,7 +19,7 @@ export default function GenderSelector() {
       <Button
         type="button"
         variant={selected === "female" ? "default" : "outline"}
-        className="flex-1"
+        className="flex-1 rounded-md"
         onClick={() => setSelected("female")}
       >
         Female

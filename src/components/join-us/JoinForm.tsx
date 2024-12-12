@@ -6,6 +6,7 @@ import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import GenderSelector from "./GenderSelector";
 import NewsletterCheckbox from "./NewsLetter";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export default function JoinForm() {
   const form = useForm();
@@ -78,7 +79,24 @@ export default function JoinForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="India" {...field} readOnly />
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select your country" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="pk">Pakistan</SelectItem>
+                    <SelectItem value="in">India</SelectItem>
+                    <SelectItem value="us">United States</SelectItem>
+                    <SelectItem value="uk">United Kingdom</SelectItem>
+                    <SelectItem value="ca">Canada</SelectItem>
+                    <SelectItem value="au">Australia</SelectItem>
+                    <SelectItem value="ae">United Arab Emirates</SelectItem>
+                    <SelectItem value="ar">Argentina</SelectItem>
+                    <SelectItem value="at">Austria</SelectItem>
+                    <SelectItem value="au">Australia</SelectItem>
+                    {/* Add more countries as needed */}
+                  </SelectContent>
+                </Select>
               </FormControl>
             </FormItem>
           )}
@@ -101,7 +119,7 @@ export default function JoinForm() {
 
         <Button
           type="submit"
-          className="w-full bg-black text-white hover:bg-gray-900"
+          className="w-full rounded-md bg-black text-white hover:bg-gray-900"
         >
           JOIN US
         </Button>
