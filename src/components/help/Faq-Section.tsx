@@ -24,7 +24,7 @@ export default function FAQSection() {
             Can I pay for my order with multiple methods?
           </AccordionTrigger>
           <AccordionContent>
-            No, payment for Nike orders can't be split between multiple payment methods.
+            No, payment for Nike orders can&apos;t be split between multiple payment methods.
           </AccordionContent>
         </AccordionItem>
 
