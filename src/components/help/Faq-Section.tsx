@@ -4,17 +4,19 @@ export default function FAQSection() {
   return (
     <div className="space-y-6 mt-8">
       <h2 className="text-lg font-semibold">FAQs</h2>
-      
+
       <Accordion type="single" collapsible className="space-y-4">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-left">
             Does my card need international purchases enabled?
           </AccordionTrigger>
           <AccordionContent>
-            Yes, we recommend asking your bank to enable international purchases on your card. 
-            You will be notified at checkout if international purchases need to be enabled.
+            Yes, we recommend asking your bank to enable international purchases
+            on your card. You will be notified at checkout if international
+            purchases need to be enabled.
             <p className="mt-4 text-sm">
-              Please note, some banks may charge a small transaction fee for international orders.
+              Please note, some banks may charge a small transaction fee for
+              international orders.
             </p>
           </AccordionContent>
         </AccordionItem>
@@ -24,7 +26,8 @@ export default function FAQSection() {
             Can I pay for my order with multiple methods?
           </AccordionTrigger>
           <AccordionContent>
-            No, payment for Nike orders can't be split between multiple payment methods.
+            No, payment for Nike orders can&apos;t be split between multiple
+            payment methods.
           </AccordionContent>
         </AccordionItem>
 
@@ -38,5 +41,5 @@ export default function FAQSection() {
         </AccordionItem>
       </Accordion>
     </div>
-  )
+  );
 }
