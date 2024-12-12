@@ -6,11 +6,9 @@ export type Product = {
   color?: string;
   image: string;
   isNew?: boolean;
-  isPromo?: boolean;
   description?: string;
   colors: number;
-  releaseDate?: string;
-}
+};
 
 export type Category = {
   id: string;

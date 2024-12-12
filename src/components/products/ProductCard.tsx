@@ -1,30 +1,56 @@
-import Image from 'next/image'
-import { cn } from "@/lib/utils"
+import Link from "next/link";
+import Image from "next/image";
+import { Product } from "@/types/product";
 
 interface ProductCardProps {
-  image: string
-  name: string
-  category: string
-  price: string
-  className?: string
+  product: Product;
 }
 
-export function ProductCard({ image, name, category, price, className }: ProductCardProps) {
+export function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className={cn("group cursor-pointer", className)}>
-      <div className="relative aspect-square overflow-hidden rounded-lg">
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover transition-transform group-hover:scale-105"
-        />
+    <Link href={`/products/${product.id}`} className="group relative block">
+      {/* Product Card Container */}
+      <div className="product-card transition-opacity duration-300 group-hover:opacity-90">
+        {/* Image Container */}
+        <div className="relative aspect-square overflow-hidden">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover transform transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw,
+                   (max-width: 1200px) 50vw,
+                   33vw"
+          />
+          {/* Product Badge */}
+          <span
+            className={`absolute top-2 left-2 px-2 py-1 text-sm ${
+              product.isNew ? "" : "bg-orange-700 text-white"
+            }`}
+          >
+            {product.isNew ? "" : "Promo Exclusion"}
+          </span>
+        </div>
+
+        {/* Product Info */}
+        <div className="mt-3 space-y-1">
+          <h3
+            className={`font-medium text-lg ${
+              product.isNew ? "text-orange-700" : "text-orange-700"
+            }`}
+          >
+            {product.isNew ? "Just In" : "Promo Exclusion"}
+          </h3>
+          <h3 className="font-medium text-lg">{product.name}</h3>
+          <p className="text-sm text-gray-500">{product.category}</p>
+          <p className="text-sm text-gray-500">
+            {product.colors} {product.colors === 1 ? "Color" : "Colors"}
+          </p>
+          <p className="font-medium">
+            MRP : ₹ {product.price.toLocaleString()}
+          </p>
+        </div>
       </div>
-      <div className="mt-4 space-y-1">
-        <h3 className="text-sm font-medium text-gray-900">{name}</h3>
-        <p className="text-sm text-gray-500">{category}</p>
-        <p className="text-sm font-medium text-gray-900">{price}</p>
-      </div>
-    </div>
-  )
+    </Link>
+  );
 } 
