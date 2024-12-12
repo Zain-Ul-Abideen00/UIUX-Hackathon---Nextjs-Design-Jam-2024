@@ -10,7 +10,7 @@ export default function RelatedLinks() {
           href="/help/delivery-options" 
           className="block text-[#111111] hover:underline"
         >
-          WHAT ARE NIKE'S DELIVERY OPTIONS?
+          WHAT ARE NIKE&apos;S DELIVERY OPTIONS?
         </Link>
         
         <Link 
