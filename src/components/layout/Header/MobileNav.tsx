@@ -39,7 +39,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/new"
+                  href="/products"
                   className="block text-[24px] text-[#111111] font-medium"
                   onClick={() => setIsOpen(false)}
                 >
@@ -48,7 +48,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
               </li>
               <li>
                 <Link
-                  href="/men"
+                  href="/products"
                   className="block text-[24px] text-[#111111] font-medium"
                   onClick={() => setIsOpen(false)}
                 >
@@ -57,7 +57,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
               </li>
               <li>
                 <Link
-                  href="/women"
+                  href="/products"
                   className="block text-[24px] text-[#111111] font-medium"
                   onClick={() => setIsOpen(false)}
                 >
@@ -66,7 +66,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
               </li>
               <li>
                 <Link
-                  href="/kids"
+                  href="/products"
                   className="block text-[24px] text-[#111111] font-medium"
                   onClick={() => setIsOpen(false)}
                 >
@@ -75,7 +75,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
               </li>
               <li>
                 <Link
-                  href="/jordan"
+                  href="/products"
                   className="block text-[24px] text-[#111111] font-medium"
                   onClick={() => setIsOpen(false)}
                 >
@@ -84,7 +84,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
               </li>
               <li>
                 <Link
-                  href="/sale"
+                  href="/products"
                   className="block text-[24px] text-[#111111] font-medium"
                   onClick={() => setIsOpen(false)}
                 >
@@ -124,14 +124,14 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
             </p>
             <div className="flex gap-2">
               <Link
-                href="/join"
+                href="/join-us"
                 className="px-5 py-2 bg-black text-white rounded-full text-[16px] font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 Join Us
               </Link>
               <Link
-                href="/signin"
+                href="/login"
                 className="px-5 py-2 border border-[#CACACC] rounded-full text-[16px] font-medium"
                 onClick={() => setIsOpen(false)}
               >
@@ -159,7 +159,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
               <span className="text-[16px] text-[#111111]">Help</span>
             </Link>
             <Link
-              href="/store-locator"
+              href="/location"
               className="flex items-center gap-4 py-2"
               onClick={() => setIsOpen(false)}
             >

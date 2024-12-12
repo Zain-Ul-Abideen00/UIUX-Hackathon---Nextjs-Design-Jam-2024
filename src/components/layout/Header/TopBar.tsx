@@ -31,7 +31,7 @@ export const TopBar = () => {
 
         {/* Right Side - Links */}
         <div className="flex items-center gap-[12px] text-[12px] text-[#111111]">
-          <Link href="/store-locator" className="hover:opacity-75">
+          <Link href="/location" className="hover:opacity-75">
             Find a Store
           </Link>
           <span className="text-[#757575]">|</span>
@@ -39,11 +39,11 @@ export const TopBar = () => {
             Help
           </Link>
           <span className="text-[#757575]">|</span>
-          <Link href="/join" className="hover:opacity-75">
+          <Link href="/join-us" className="hover:opacity-75">
             Join Us
           </Link>
           <span className="text-[#757575]">|</span>
-          <Link href="/signin" className="hover:opacity-75">
+          <Link href="/login" className="hover:opacity-75">
             Sign In
           </Link>
         </div>
