@@ -1,6 +1,6 @@
-import { Phone, MessageCircle, MapPin } from "lucide-react"
+import { Phone, MessageCircle, MapPin, Mail } from "lucide-react"
 
-export default function ContactInfo() {
+export default function ContactInfo() { 
   return (
     <div className="border-l pl-8 space-y-8 lg:sticky lg:top-8">
       <h2 className="text-2xl font-bold text-center mb-8">CONTACT US</h2>
@@ -31,6 +31,19 @@ export default function ContactInfo() {
           </div>
         </div>
 
+        {/* Email Support */}
+        <div className="text-center">
+          <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-4">
+              <Mail className="h-16 w-16" />
+            </div>
+          </div>
+          <div className="text-sm">
+            <p>We&apos;ll reply within</p>
+            <p>five business days</p>
+          </div>
+        </div>
+
         {/* Store Locator */}
         <div className="text-center">
           <div className="flex justify-center mb-4">
@@ -41,5 +54,5 @@ export default function ContactInfo() {
         </div>
       </div>
     </div>
-  )
+  );
 }
