@@ -22,7 +22,7 @@ export function LoginForm() {
           />
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-center justify-between">
           <div className="flex items-center space-x-2">
             <Checkbox id="keepSignedIn" />
             <label htmlFor="keepSignedIn" className="text-sm text-gray-500">
@@ -57,7 +57,7 @@ export function LoginForm() {
       <div className="text-center">
         <span className="text-sm text-gray-500">
           Not a Member?{" "}
-          <Link href="#" className="underline text-gray-700 font-bold">
+          <Link href="/join-us" className="underline text-gray-700 font-bold">
             Join Us
           </Link>
         </span>

@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input"
 
 export default function SearchBar() {
   return (
-    <div className="relative min-w-[300px] mx-auto">
+    <div className="relative max-w-[500px] mx-auto">
       <Input 
         placeholder="What can we help you with?"
         className="pl-3 h-14 rounded-lg border-gray-400"

@@ -56,7 +56,7 @@ export const FooterNav = () => {
   };
 
   return (
-    <nav className="max-w-[880px] mx-auto py-16">
+    <nav className="mx-auto px-5 sm:px-10 py-16">
       {/* Desktop View */}
       <div className="hidden md:flex justify-between">
         {navItems.map((section, index) => (

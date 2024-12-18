@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import { LocationIcon } from './LocationIcon'
 
 export const FooterBottom = () => {
   return (
     <div className="bg-[#111111] py-6 border-t border-[#222222]">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
           {/* Left Side */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
@@ -20,18 +21,18 @@ export const FooterBottom = () => {
 
           {/* Right Side */}
           <div className="flex flex-wrap gap-4 sm:gap-6">
-            <a href="#" className="text-[#7E7E7E] hover:text-white text-[12px]">
+            <Link href="/help" className="text-[#7E7E7E] hover:text-white text-[12px]">
               Guides
-            </a>
-            <a href="#" className="text-[#7E7E7E] hover:text-white text-[12px]">
+            </Link>
+            <Link href="/help" className="text-[#7E7E7E] hover:text-white text-[12px]">
               Terms of Sale
-            </a>
-            <a href="#" className="text-[#7E7E7E] hover:text-white text-[12px]">
+            </Link>
+            <Link href="/help" className="text-[#7E7E7E] hover:text-white text-[12px]">
               Terms of Use
-            </a>
-            <a href="#" className="text-[#7E7E7E] hover:text-white text-[12px]">
+            </Link>
+            <Link href="/help" className="text-[#7E7E7E] hover:text-white text-[12px]">
               Nike Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

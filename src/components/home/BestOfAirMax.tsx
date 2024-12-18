@@ -90,7 +90,7 @@ export const BestOfAirMax = () => {
 
   return (
     <section className="w-full py-8 sm:py-[64px]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="mx-auto px-5 sm:px-10">
         <Carousel
           opts={{
             align: "start",

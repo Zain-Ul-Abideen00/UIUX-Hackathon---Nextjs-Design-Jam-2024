@@ -4,7 +4,7 @@ import { Button } from '../ui/Button';
 
 export const Featured = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12">
+    <section className="mx-auto px-5 sm:px-10">
       <h2 className="text-xl sm:text-[24px] text-[#111111] font-medium mb-4 sm:mb-[25px]">
         Featured
       </h2>

@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import GenderSelector from "./GenderSelector";
 import NewsletterCheckbox from "./NewsLetter";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import Link from "next/link";
 
 export default function JoinForm() {
   const form = useForm();
@@ -93,7 +94,6 @@ export default function JoinForm() {
                     <SelectItem value="ae">United Arab Emirates</SelectItem>
                     <SelectItem value="ar">Argentina</SelectItem>
                     <SelectItem value="at">Austria</SelectItem>
-                    <SelectItem value="au">Australia</SelectItem>
                     {/* Add more countries as needed */}
                   </SelectContent>
                 </Select>
@@ -107,13 +107,13 @@ export default function JoinForm() {
 
         <p className="text-sm text-center text-gray-500">
           By creating an account, you agree to Nike&apos;s{" "}
-          <a href="#" className="underline">
+          <Link href="/help" className="underline">
             Privacy Policy
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="#" className="underline">
+          <Link href="/help" className="underline">
             Terms of Use
-          </a>
+          </Link>
           .
         </p>
 
@@ -126,9 +126,9 @@ export default function JoinForm() {
 
         <p className="text-center text-sm">
           Already a Member?{" "}
-          <a href="#" className="text-black underline">
+          <Link href="/login" className="text-black font-semibold underline">
             Sign In
-          </a>
+          </Link>
         </p>
       </form>
     </Form>

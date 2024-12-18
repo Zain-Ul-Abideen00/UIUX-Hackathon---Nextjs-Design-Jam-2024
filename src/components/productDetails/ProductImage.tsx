@@ -7,7 +7,7 @@ interface ProductImageProps {
 
 export function ProductImage({ imageUrl, name }: ProductImageProps) {
   return (
-    <div className="max-w-[560px] h-full aspect-square flex relative">
+    <div className="max-w-[560px] aspect-square flex relative bg-blue-500">
         <Image
           src={imageUrl}
           alt={name}

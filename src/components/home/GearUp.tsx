@@ -91,12 +91,12 @@ export const GearUp = () => {
   };
 
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 mb-8 sm:mb-16">
+    <section className="mx-auto px-5 sm:px-10 mb-8 sm:mb-16">
       <h2 className="text-xl sm:text-[24px] text-[#111111] font-medium mb-4 sm:mb-[25px]">
         Gear Up
       </h2>
 
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-[12px]">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-[4%] lg:ps-[3%]">
         {/* Men's Section */}
         <div className="w-full lg:w-[666px]">
           <div className="flex justify-between items-center mb-4">

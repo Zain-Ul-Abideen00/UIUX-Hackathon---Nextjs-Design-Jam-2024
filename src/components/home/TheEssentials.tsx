@@ -25,17 +25,17 @@ const essentials: EssentialCard[] = [
 
 export const TheEssentials = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 mb-8 sm:mb-16">
+    <section className="mx-auto px-5 sm:px-10 mb-8 sm:mb-16">
       <h2 className="text-[24px] text-[#111111] font-medium mb-[25px]">
         The Essentials
       </h2>
 
       {/* Cards Container */}
-      <div className="flex flex-col sm:flex-row gap-4 sm:gap-[12px]">
+      <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-[12px]">
         {essentials.map((item, index) => (
           <div
             key={index}
-            className="relative w-full sm:w-[440px] h-[300px] sm:h-[540px] group"
+            className="relative w-full sm:w-[480px] h-[300px] sm:h-[580px] group"
           >
             {/* Image */}
             <Image

@@ -76,8 +76,8 @@ export function ProductFilters({
   };
 
   return (
-    <div className="sticky top-0 w-[260px] flex-shrink-0 border-r">
-      <ScrollArea className="h-[calc(100vh-9rem)] px-6 pt-5">
+    <div className="sticky top-14 w-[260px] flex-shrink-0 border-r">
+      <ScrollArea className="h-[calc(100vh-9rem)] pt-5">
         {/* Top Links Section */}
         <div className="space-y-4 mb-6">
           {topLinks.map((link) => (
@@ -94,7 +94,7 @@ export function ProductFilters({
           <Accordion type="single" collapsible defaultValue="categories">
             {/* Categories Section */}
             <AccordionItem value="categories" className="border-b">
-              <AccordionTrigger className="text-sm font-medium">
+              <AccordionTrigger className="text-sm font-medium pe-4">
                 Categories
               </AccordionTrigger>
               <AccordionContent>
@@ -123,7 +123,7 @@ export function ProductFilters({
 
             {/* Gender Section */}
             <AccordionItem value="gender" className="border-b">
-              <AccordionTrigger className="text-sm font-medium">
+              <AccordionTrigger className="text-sm font-medium pe-4">
                 Gender
               </AccordionTrigger>
               <AccordionContent>
@@ -145,7 +145,7 @@ export function ProductFilters({
 
             {/* Price Range Section */}
             <AccordionItem value="price" className="border-b">
-              <AccordionTrigger className="text-sm font-medium">
+              <AccordionTrigger className="text-sm font-medium pe-4">
                 Shop By Price
               </AccordionTrigger>
               <AccordionContent>

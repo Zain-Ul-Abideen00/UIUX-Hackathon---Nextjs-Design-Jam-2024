@@ -5,7 +5,7 @@ import { Button } from '../ui/Button';
 
 export const DontMiss = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 mb-8 sm:mb-16">
+    <section className="mx-auto px-5 sm:px-10 mb-8 sm:mb-16">
       <h2 className="text-xl sm:text-[24px] text-[#111111] font-medium mb-4 sm:mb-[25px]">
         Don&apos;t Miss
       </h2>

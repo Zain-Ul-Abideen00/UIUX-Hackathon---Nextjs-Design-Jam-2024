@@ -4,16 +4,16 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 
 const categories = [
-  { name: "Best Selling Products", href: "/products" },
-  { name: "Best Shoes", href: "/products" },
-  { name: "New Basketball Shoes", href: "/products" },
-  { name: "New Football Shoes", href: "/products" },
-  { name: "New Men's Shoes", href: "/products" },
-  { name: "New Running Shoes", href: "/products" },
-  { name: "Best Men's Shoes", href: "/products" },
-  { name: "New Jordan Shoes", href: "/products" },
-  { name: "Best Women's Shoes", href: "/products" },
-  { name: "Best Training & Gym", href: "/products" },
+  { id: "1", name: "Best Selling Products", href: "/products" },
+  { id: "2", name: "Best Shoes", href: "/products" },
+  { id: "3", name: "New Basketball Shoes", href: "/products" },
+  { id: "4", name: "New Football Shoes", href: "/products" },
+  { id: "5", name: "New Men's Shoes", href: "/products" },
+  { id: "6", name: "New Running Shoes", href: "/products" },
+  { id: "7", name: "Best Men's Shoes", href: "/products" },
+  { id: "8", name: "New Jordan Shoes", href: "/products" },
+  { id: "9", name: "Best Women's Shoes", href: "/products" },
+  { id: "10", name: "Best Training & Gym", href: "/products" },
 ]
 
 export function RelatedCategories() {
@@ -26,7 +26,7 @@ export function RelatedCategories() {
         <div className="flex flex-wrap gap-3">
           {categories.map((category) => (
             <Link
-              key={category.href}
+              key={category.id}
               href={category.href}
               className={cn(
                 "inline-flex items-center px-6 py-2 rounded-full text-sm",

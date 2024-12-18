@@ -97,7 +97,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
           {/* Brand Links */}
           <div className="px-4 py-4 space-y-3">
             <Link
-              href="/jordan"
+              href="/"
               className="flex items-center gap-2 py-2"
               onClick={() => setIsOpen(false)}
             >
@@ -106,11 +106,6 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
                 Jordan
               </span>
             </Link>
-            <Link
-              href="/converse"
-              className="flex items-center gap-2 py-2"
-              onClick={() => setIsOpen(false)}
-            ></Link>
           </div>
 
           {/* Nike Member Message */}
@@ -118,7 +113,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
             <p className="text-[16px] text-[#707072]">
               Become a Nike Member for the best products, inspiration and
               stories in sport.{" "}
-              <Link href="/learn-more" className="text-black underline">
+              <Link href="/help" className="text-black underline">
                 Learn more
               </Link>
             </p>
@@ -143,7 +138,7 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
           {/* Utility Links */}
           <div className="px-4 py-4 space-y-4 border-t border-[#F5F5F5]">
             <Link
-              href="/orders"
+              href="/cart"
               className="flex items-center gap-4 py-2"
               onClick={() => setIsOpen(false)}
             >
@@ -172,12 +167,12 @@ export const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
         {/* Mobile Bottom Icons */}
         <SheetFooter className="fixed bottom-0 right-0 w-[320px] border-t border-[#F5F5F5]">
           <div className="h-[60px] px-4 bg-white w-full flex items-center justify-around">
-            <button className="w-[40px] h-[40px] rounded-full hover:bg-[#F5F5F5] flex items-center justify-center">
+            <Link href="/wishlist" className="w-[40px] h-[40px] rounded-full hover:bg-[#F5F5F5] flex items-center justify-center">
               <FiHeart className="w-6 h-6 text-[#111111]" />
-            </button>
-            <button className="w-[40px] h-[40px] rounded-full hover:bg-[#F5F5F5] flex items-center justify-center">
+            </Link>
+            <Link href="/cart" className="w-[40px] h-[40px] rounded-full hover:bg-[#F5F5F5] flex items-center justify-center">
               <FiShoppingBag className="w-6 h-6 text-[#111111]" />
-            </button>
+            </Link>
           </div>
         </SheetFooter>
       </SheetContent>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function JoinUsPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white p-4">
-      <div className="w-full max-w-[380px]">
+      <div className="w-full max-w-[380px] p-5">
         <div className="mb-8">
           <Image
             src="/nike.svg"

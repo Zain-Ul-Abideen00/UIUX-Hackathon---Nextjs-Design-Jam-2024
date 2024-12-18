@@ -49,7 +49,7 @@ export default function ProductsPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="mx-auto px-5 sm:px-10 py-8">
       <ProductHeader
         totalProducts={products.length}
         onFilterToggle={toggleFilter}

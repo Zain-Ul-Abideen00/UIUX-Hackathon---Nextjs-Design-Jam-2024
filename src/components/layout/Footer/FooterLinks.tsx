@@ -1,30 +1,39 @@
 "use client"
 import { useState } from "react";
 import { SocialIcons } from "./SocialIcons"
+import Link from "next/link";
 
 const footerLinks = {
   findStore: [
-    'Find A Store',
-    'Become A Member',
-    'Sign Up for Email',
-    'Send Us Feedback',
-    'Student Discounts'
+    { id: "fs1", name: "Find A Store", href: "/location" },
+    { id: "fs2", name: "Become A Member", href: "/join-us" },
+    { id: "fs3", name: "Sign Up for Email", href: "/join-us" },
+    { id: "fs4", name: "Send Us Feedback", href: "/login" },
+    { id: "fs5", name: "Student Discounts", href: "/help" },
   ],
   getHelp: [
-    'Order Status',
-    'Delivery',
-    'Returns',
-    'Payment Options',
-    'Contact Us On Nike.com Inquiries',
-    'Contact Us On All Other Inquiries'
+    { id: "gh1", name: "Order Status", href: "/help" },
+    { id: "gh2", name: "Delivery", href: "/help" },
+    { id: "gh3", name: "Returns", href: "/help" },
+    { id: "gh4", name: "Payment Options", href: "/help" },
+    {
+      id: "gh5",
+      name: "Contact Us On Nike.com Inquiries",
+      href: "/help",
+    },
+    {
+      id: "gh6",
+      name: "Contact Us On All Other Inquiries",
+      href: "/help",
+    },
   ],
   aboutNike: [
-    'News',
-    'Careers',
-    'Investors',
-    'Sustainability'
-  ]
-}
+    { id: "an1", name: "News", href: "#" },
+    { id: "an2", name: "Careers", href: "#" },
+    { id: "an3", name: "Investors", href: "#" },
+    { id: "an4", name: "Sustainability", href: "#" },
+  ],
+};
 
 export const FooterLinks = () => {
   const [openSections, setOpenSections] = useState<string[]>([]);
@@ -37,7 +46,7 @@ export const FooterLinks = () => {
 
   return (
     <div className="bg-[#111111] py-8 sm:py-10">
-      <div className="max-w-[1440px] mx-auto lg:flex lg:justify-between">
+      <div className="mx-auto lg:flex lg:justify-between">
         {/* Desktop View */}
         <div className="hidden lg:grid lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Find A Store Column */}
@@ -47,13 +56,13 @@ export const FooterLinks = () => {
             </h3>
             <ul className="space-y-3">
               {footerLinks.findStore.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+                <li key={link.id}>
+                  <Link
+                    href={link.href}
                     className="text-[#7E7E7E] hover:text-white text-[14px] block"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -66,13 +75,13 @@ export const FooterLinks = () => {
             </h3>
             <ul className="space-y-3">
               {footerLinks.getHelp.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+                <li key={link.id}>
+                  <Link
+                    href={link.href}
                     className="text-[#7E7E7E] hover:text-white text-[14px] block"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -85,25 +94,26 @@ export const FooterLinks = () => {
             </h3>
             <ul className="space-y-3">
               {footerLinks.aboutNike.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+                <li key={link.id}>
+                  <Link
+                    href={link.href}
                     className="text-[#7E7E7E] hover:text-white text-[14px] block"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
+
         {/* Mobile/Tablet View */}
         <div className="lg:hidden w-full">
           {/* Find A Store Section */}
           <div className="border-b border-[#222]">
             <button
               onClick={() => toggleSection("findStore")}
-              className="w-full py-4 px-4 flex justify-between items-center"
+              className="w-full py-4 flex justify-between items-center"
             >
               <h3 className="text-white text-[16px] font-medium uppercase">
                 Find A Store
@@ -132,15 +142,15 @@ export const FooterLinks = () => {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <ul className="space-y-3 px-4 pb-4">
+              <ul className="space-y-3 pb-4">
                 {footerLinks.findStore.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.id}>
+                    <Link
+                      href={link.href}
                       className="text-[#7E7E7E] hover:text-white text-[14px] block"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -151,7 +161,7 @@ export const FooterLinks = () => {
           <div className="border-b border-[#222]">
             <button
               onClick={() => toggleSection("getHelp")}
-              className="w-full py-4 px-4 flex justify-between items-center"
+              className="w-full py-4 flex justify-between items-center"
             >
               <h3 className="text-white text-[16px] font-medium uppercase">
                 Get Help
@@ -180,15 +190,15 @@ export const FooterLinks = () => {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <ul className="space-y-3 px-4 pb-4">
+              <ul className="space-y-3 pb-4">
                 {footerLinks.getHelp.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.id}>
+                    <Link
+                      href={link.href}
                       className="text-[#7E7E7E] hover:text-white text-[14px] block"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -199,7 +209,7 @@ export const FooterLinks = () => {
           <div className="border-b border-[#222]">
             <button
               onClick={() => toggleSection("aboutNike")}
-              className="w-full py-4 px-4 flex justify-between items-center"
+              className="w-full py-4 flex justify-between items-center"
             >
               <h3 className="text-white text-[16px] font-medium uppercase">
                 About Nike
@@ -228,15 +238,15 @@ export const FooterLinks = () => {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <ul className="space-y-3 px-4 pb-4">
+              <ul className="space-y-3 pb-4">
                 {footerLinks.aboutNike.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.id}>
+                    <Link
+                      href={link.href}
                       className="text-[#7E7E7E] hover:text-white text-[14px] block"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

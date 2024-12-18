@@ -18,7 +18,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Hero Image and Content */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 py-6 sm:py-[58px]">
+      <div className="mx-auto px-5 sm:px-10 py-6 sm:py-[58px]">
         <div className="relative">
           {/* Hero Image */}
           <div className="w-full h-[300px] sm:h-[500px] lg:h-[700px] relative">
@@ -45,12 +45,8 @@ export const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-1.5 mt-6 sm:mt-8 lg:mt-12">
-              <Button>
-                Notify Me
-              </Button>
-              <Button>
-                Shop Air Max
-              </Button>
+              <Button>Notify Me</Button>
+              <Button>Shop Air Max</Button>
             </div>
           </div>
         </div>
